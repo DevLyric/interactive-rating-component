@@ -1,4 +1,6 @@
 import { useState } from "react";
+import star from "./assets/icon-star.svg";
+import ty from "./assets/illustration-thank-you.svg";
 
 function App() {
   const [selectedRating, setSelectedRating] = useState<number | undefined>(
@@ -19,11 +21,7 @@ function App() {
     <div className="h-screen w-full flex justify-center items-center px-5">
       {isSubmitted ? (
         <div className="flex flex-col items-center gap-8 h-[400px] w-[400px] bg-gradient-to-t from-[#171e28] to-[#232833] rounded-3xl p-8">
-          <img
-            className="w-44"
-            src="../src/assets/illustration-thank-you.svg"
-            alt=""
-          />
+          <img className="w-44" src={ty} alt="" />
           <div className="text-center w-full bg-[#282f38] py-2 rounded-full text-orange-600">
             You selected {selectedRating} out 5
           </div>
@@ -36,7 +34,7 @@ function App() {
       ) : (
         <div className="flex flex-col justify-between h-[440px] w-[440px] bg-gradient-to-t from-[#171e28] to-[#232833] rounded-3xl p-8">
           <div className="bg-[#242f39] h-14 w-14 flex items-center justify-center rounded-full">
-            <img src="../../src/assets/icon-star.svg" alt="" />
+            <img src={star} alt="" />
           </div>
           <h3 className="text-3xl">How did we do?</h3>
           <p className="text-[#9ea4b0]">
